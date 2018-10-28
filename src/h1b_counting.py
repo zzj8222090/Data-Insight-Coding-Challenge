@@ -25,11 +25,6 @@ def top_certified(name):
     occupation = [record[occupation_col] for record in splitdata if record[status_col] == 'CERTIFIED']
     states = [record[state_col] for record in splitdata if
               record[status_col] == 'CERTIFIED' and record[state_col != '']]
-    # Split the records based on the 'CERTIFIED' flag and only put occupation names in the list
-    occupation = [record.split(';')[occupation_col] for record in lines[1:] if
-                  record.split(';')[status_col] == 'CERTIFIED' and record.split(';')[occupation_col] != '']
-    states = [record.split(';')[state_col] for record in lines[1:] if
-              record.split(';')[status_col] == 'CERTIFIED' and record.split(';')[state_col] != '']
     # Count the top 10 occupations, find the names, numbers and percentage, Counter returns a list of tuples.
     count_occ = Counter(occupation).most_common(10)
     top_occ = [i[0] for i in count_occ]
