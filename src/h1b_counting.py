@@ -14,7 +14,8 @@ def top_certified(name):
     # Find the column number of STATUS,OCCUPATION_NAME and STATE in case the labels differ in years.
     status_col = labels.index([i for i in labels if 'STATUS' in i][0])
     occupation_col = labels.index([i for i in labels if 'SOC_NAME' in i][0])
-    state_col = labels.index([i for i in labels if 'STATE' in i and 'EMPLOYER_STATE' not in i][0])
+    state_col = labels.index(
+        [i for i in labels if 'STATE' in i and 'EMPLOYER_STATE' not in i and 'AGENT_ATTORNEY_STATE' not in i][0])
 
     # Split the records by ';' using csv and io module
     splitdata = []
@@ -26,8 +27,7 @@ def top_certified(name):
 
     # Split the records based on the 'CERTIFIED' flag and only put occupation names in the list
     occupation = [record[occupation_col] for record in splitdata if record[status_col] == 'CERTIFIED']
-    states = [record[state_col] for record in splitdata if
-              record[status_col] == 'CERTIFIED' and record[state_col != '']]
+    states = [record[state_col] for record in splitdata if record[status_col] == 'CERTIFIED']
 
     # Count the top 10 occupations, find the names, numbers and percentage, Counter returns a list of tuples.
     count_occ = Counter(occupation).most_common(10)
@@ -41,7 +41,7 @@ def top_certified(name):
     top_state_num = [i[1] for i in count_state]
     percentage_state = [round(i / len(states), 1) for i in top_state_num]
 
-    #Create results files and write labels to them
+    # Create results files and write labels to them
     occ_output = open(sys.argv[2], 'w')
     occ_output.write('TOP_OCCUPATIONS;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE\n')
     state_output = open(sys.argv[3], 'w')
