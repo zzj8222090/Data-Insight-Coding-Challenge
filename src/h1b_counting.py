@@ -30,16 +30,18 @@ def top_certified(name):
     states = [record[state_col] for record in splitdata if record[status_col] == 'CERTIFIED']
 
     # Count the top 10 occupations, find the names, numbers and percentage, Counter returns a list of tuples.
-    count_occ = Counter(occupation).most_common(10)
+    count_occ = dict(Counter(occupation).most_common(10))
+    count_occ = sorted(count_occ.items(), key=lambda x: (-x[1], x[0]))
     top_occ = [i[0] for i in count_occ]
     top_occ_num = [i[1] for i in count_occ]
-    percentage_occ = [round(i / len(occupation), 1) for i in top_occ_num]
+    percentage_occ = [round(i / len(occupation) * 100, 1) for i in top_occ_num]
 
     # Count the top 10 states, find the names, numbers and percentage
-    count_state = Counter(states).most_common(10)
+    count_state = dict(Counter(states).most_common(10))
+    count_state = sorted(count_state.items(), key=lambda x: (-x[1], x[0]))
     top_state = [i[0] for i in count_state]
     top_state_num = [i[1] for i in count_state]
-    percentage_state = [round(i / len(states), 1) for i in top_state_num]
+    percentage_state = [round(i / len(states) * 100, 1) for i in top_state_num]
 
     # Create results files and write labels to them
     occ_output = open(sys.argv[2], 'w')
