@@ -1,19 +1,8 @@
-import pandas as pd
 import sys
 from collections import Counter
+from io import StringIO
+import csv
 
-
-#
-# f=pd.read_csv('H1B_FY_2014.csv',sep=';',index_col=0)
-# d=pd.read_csv('H1B_FY_2015.csv',sep=';',index_col=0)
-# g=pd.read_csv('H1B_FY_2016.csv',sep=';',index_col=0)
-# print(g.groupby('WORKSITE_STATE').count())
-# print(f['LCA_CASE_SOC_NAME'])
-# print(g)
-# print(f.groupby('STATUS').count())
-# print(f.columns)
-# print(d.columns)
-# print(g.columns)
 
 def top_certified(name):
     # Read in the dataset
@@ -25,6 +14,17 @@ def top_certified(name):
     status_col = labels.index([i for i in labels if 'STATUS' in i][0])
     occupation_col = labels.index([i for i in labels if 'SOC_NAME' in i][0])
     state_col = labels.index([i for i in labels if 'STATE' in i and 'EMPLOYER_STATE' not in i][0])
+    # Split the records by ';' using csv and io module
+    splitdata = []
+    for line in lines[1:]:
+        data = StringIO(line)
+        reader = csv.reader(data, delimiter=';')
+        for row in reader:
+            splitdata.append(row)
+    # Split the records based on the 'CERTIFIED' flag and only put occupation names in the list
+    occupation = [record[occupation_col] for record in splitdata if record[status_col] == 'CERTIFIED']
+    states = [record[state_col] for record in splitdata if
+              record[status_col] == 'CERTIFIED' and record[state_col != '']]
     # Split the records based on the 'CERTIFIED' flag and only put occupation names in the list
     occupation = [record.split(';')[occupation_col] for record in lines[1:] if
                   record.split(';')[status_col] == 'CERTIFIED' and record.split(';')[occupation_col] != '']
