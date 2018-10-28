@@ -1,4 +1,5 @@
 import pandas as pd
+import sys
 from collections import Counter
 #
 # f=pd.read_csv('H1B_FY_2014.csv',sep=';',index_col=0)
@@ -41,12 +42,12 @@ def top_certified(name):
     print(top_state)
     print(top_state_num)
     print(percentage_state)
-    occ_output = open('top_10_occupations.txt','w')
+    occ_output = open(sys.argv[2],'w')
     occ_output.write('TOP_OCCUPATIONS;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE\n')
-    state_output = open('top_10_states.txt','w')
+    state_output = open(sys.argv[3],'w')
     state_output.write('TOP_STATES;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE\n')
     for i in range(10):
         occ_output.write(str(top_occ[i])+';'+str(top_occ_num[i])+';'+str(percentage_occ[i])+'%\n')
         state_output.write(str(top_state[i])+';'+str(top_state_num[i])+';'+str(percentage_state[i])+'%\n')
 
-top_certified('H1B_FY_2016.csv')
+top_certified(str(sys.argv[1]))
