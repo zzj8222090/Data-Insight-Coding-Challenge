@@ -14,14 +14,16 @@ def top_certified(name):
     # Find the column number of STATUS,OCCUPATION_NAME and STATE in case the labels differ in years.
     status_col = labels.index([i for i in labels if 'STATUS' in i][0])
     occupation_col = labels.index([i for i in labels if 'SOC_NAME' in i][0])
-    state_col = labels.index(
-        [i for i in labels if 'STATE' in i and 'EMPLOYER_STATE' not in i and 'AGENT_ATTORNEY_STATE' not in i][0])
+    state_col = labels.index([i for i in labels if
+                              'STATE' in i and 'EMPLOYER' not in i and 'employer' not in i and 'AGENT_ATTORNEY' not in i and 'agent_attorney' not in i][
+                                 0])
 
     # Split the records by ';' using csv and io module
     splitdata = []
     for line in lines[1:]:
         data = StringIO(line)
         reader = csv.reader(data, delimiter=';')
+        # Append each row that is split read from csv to the list
         for row in reader:
             splitdata.append(row)
 
@@ -31,6 +33,7 @@ def top_certified(name):
 
     # Count the top 10 occupations, sort by values then by keys, find the names, numbers and percentage, Counter returns a list of tuples.
     count_occ = dict(Counter(occupation).most_common(10))
+    # Sort the resulting dictionary first by values then by keys
     count_occ = sorted(count_occ.items(), key=lambda x: (-x[1], x[0]))
     top_occ = [i[0] for i in count_occ]
     top_occ_num = [i[1] for i in count_occ]
@@ -38,6 +41,7 @@ def top_certified(name):
 
     # Count the top 10 states, sort by values then by keys, find the names, numbers and percentage
     count_state = dict(Counter(states).most_common(10))
+    # Sort the resulting dictionary first by values then by keys
     count_state = sorted(count_state.items(), key=lambda x: (-x[1], x[0]))
     top_state = [i[0] for i in count_state]
     top_state_num = [i[1] for i in count_state]
