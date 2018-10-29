@@ -107,7 +107,7 @@ FL;18684;3.3%
 
 ## **Comments**
 
-- I did't put test files inside input folder because I didn't want to push large files to github.
+- I did't put test datasets inside input folder because I didn't want to push large files to github.
 - To run, just put the h1b_input.csv(or whatever anything else) file into input folder and run the run.sh.
 - I have tested the results with the output by pandas, which turned out to be the same. The code I used was, 
 ```python
