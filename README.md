@@ -23,7 +23,7 @@ H1B_FY_2016.csv
 
 ## **Results**
 
-2014: 
+###### 2014: 
 ``` 
 TOP_OCCUPATIONS;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE  
 Computer Systems Analysts;85334;18.7%  
@@ -50,7 +50,7 @@ GA;16080;3.5%
 WA;15581;3.4%  
 FL;15563;3.4%  
 ```
-2015:  
+###### 2015:  
 ```
 TOP_OCCUPATIONS;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE  
 COMPUTER SYSTEMS ANALYSTS;107736;19.7%  
@@ -77,7 +77,7 @@ PA;20146;3.7%
 WA;19225;3.5%  
 FL;18296;3.3%  
 ```
-2016:
+###### 2016:
 ```
 TOP_OCCUPATIONS;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE  
 SOFTWARE DEVELOPERS, APPLICATIONS;106758;18.7%  
@@ -113,4 +113,4 @@ FL;18684;3.3%
 ```python
 f.loc[f['STATUS']=='CERTIFIED'].groupby('LCA_CASE_WORKLOC1_STATE',as_index=False).count().sort_values('STATUS',ascending=False)['STATUS'][0:10]
 ```
-- The time complexity is O(nm) where n is the number of lines in the input file and m is the number of columns, which means parsing the input file is the largest portion in terms of running time in my algorithm and the average total running time is around 7 seconds(depending on the machine).
+- The time complexity is **O(nm)** where n is the number of lines in the input file and m is the number of columns, which means parsing the input file is the largest portion in terms of running time in my algorithm and the average total running time is around 7 seconds(depending on the machine).
