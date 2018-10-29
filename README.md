@@ -23,7 +23,8 @@ Approach
 
 Results
 
-2014:  
+2014: 
+``` 
 TOP_OCCUPATIONS;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE  
 Computer Systems Analysts;85334;18.7%  
 Software Developers, Applications;68258;15.0%  
@@ -35,6 +36,7 @@ Accountants and Auditors;8512;1.9%
 Financial Analysts;7784;1.7%  
 Network and Computer Systems Administrators;7300;1.6%  
 Mechanical Engineers;6553;1.4%  
+```
 
 TOP_STATES;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE  
 CA;85164;18.7%  
