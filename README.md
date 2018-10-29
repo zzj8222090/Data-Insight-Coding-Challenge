@@ -103,5 +103,5 @@ Comments
 
 - I did't put test files inside input folder because I didn't want to push large files to github.
 - To run, just put the h1b_input.csv(or whatever anything else) file into input folder and run the run.sh.
-- I have tested the results with the output by pandas, which turned out to be same. The code I used was, f.loc[f['STATUS']=='CERTIFIED'].groupby('LCA_CASE_WORKLOC1_STATE',as_index=False).count().sort_values('STATUS',ascending=False)['STATUS'][0:10]
+- I have tested the results with the output by pandas, which turned out to be the same. The code I used was, f.loc[f['STATUS']=='CERTIFIED'].groupby('LCA_CASE_WORKLOC1_STATE',as_index=False).count().sort_values('STATUS',ascending=False)['STATUS'][0:10]
 - The time complexity is O(nm) where n is the number of lines in the input file and m is the number of columns, which means parsing the input file is the largest portion in terms of running time in my algorithm and the average total running time is around 7 seconds(depending on the machine).
