@@ -8,9 +8,9 @@ The problem here is to generate two files: Top 10 Occupations and Top 10 States 
 
 Input(test) Dataset
 
-H1B_FY_2014.csv
-H1B_FY_2015.csv
-H1B_FY_2016.csv
+H1B_FY_2014.csv  
+H1B_FY_2015.csv  
+H1B_FY_2016.csv  
 
 Approach
 
@@ -18,7 +18,7 @@ Approach
 - Locate which column that will be uesd later, i.e. occupation_name, state, status.
 - Exploit the csv and io module to parse each rows to extract the imformation. There are many records that have semicolons inside a single cell that are covered by two double quotes, so that the regular spliting method (string.split) won't work well in this case.
 - Put the filtered information in a created list and use a Counter to count the number of different soc_name/state that are needed.
-- Convert the resulting Counter object to a dictionary and then sort the dictionary first by values(number of occupations/states) then by keys(name of occupations/state).
+- Convert the resulting Counter object to a dictionary and then sort the dictionary first by values(number of occupations/states) then by keys(name of occupations/states).
 - Write the output to new files.
 
 Results
