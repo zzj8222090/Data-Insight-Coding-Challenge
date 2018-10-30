@@ -52,7 +52,7 @@ GA;16080;3.5%
 WA;15581;3.4%  
 FL;15563;3.4%  
 ```
-<img src="/src/plots/2014_state_pie.png" width="490" height="480">
+<img src="/src/plots/2014_state_pie.png" width="500" height="470">
 
 ###### 2015:  
 ```
@@ -68,7 +68,7 @@ NETWORK AND COMPUTER SYSTEMS ADMINISTRATORS;9494;1.7%
 FINANCIAL ANALYSTS;8194;1.5%  
 DATABASE ADMINISTRATORS;7506;1.4%  
 ```
-<img src="/src/plots/2015_occ_pie.png" width="650" height="500">
+<img src="/src/plots/2015_occ_pie.png" width="680" height="500">
 
 ```
 TOP_STATES;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE  
@@ -83,7 +83,7 @@ PA;20146;3.7%
 WA;19225;3.5%  
 FL;18296;3.3%  
 ```
-<img src="/src/plots/2014_state_pie.png" width="490" height="480">
+<img src="/src/plots/2014_state_pie.png" width="520" height="480">
 
 ###### 2016:
 ```
@@ -99,7 +99,7 @@ ACCOUNTANTS AND AUDITORS;10187;1.8%
 NETWORK AND COMPUTER SYSTEMS ADMINISTRATORS;9876;1.7%  
 MECHANICAL ENGINEERS;8315;1.5%  
 ```
-<img src="/src/plots/2016_occ_pie.png" width="650" height="500">
+<img src="/src/plots/2016_occ_pie.png" width="680" height="500">
 
 ```
 TOP_STATES;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE  
@@ -114,7 +114,7 @@ PA;21141;3.7%
 WA;20387;3.6%  
 FL;18684;3.3%  
 ```
-<img src="/src/plots/2014_state_pie.png" width="490" height="480">
+<img src="/src/plots/2014_state_pie.png" width="520" height="480">
 
 ## **Comments**
 
