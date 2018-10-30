@@ -52,7 +52,7 @@ GA;16080;3.5%
 WA;15581;3.4%  
 FL;15563;3.4%  
 ```
-<img src="/src/plots/2014_state_pie.png" width="500" height="470">
+<img src="/src/plots/2014_state_pie.png" width="500" height="450">
 
 ###### 2015:  
 ```
@@ -68,7 +68,7 @@ NETWORK AND COMPUTER SYSTEMS ADMINISTRATORS;9494;1.7%
 FINANCIAL ANALYSTS;8194;1.5%  
 DATABASE ADMINISTRATORS;7506;1.4%  
 ```
-<img src="/src/plots/2015_occ_pie.png" width="680" height="500">
+<img src="/src/plots/2015_occ_pie.png" width="680" height="470">
 
 ```
 TOP_STATES;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE  
