@@ -37,7 +37,7 @@ Financial Analysts;7784;1.7%
 Network and Computer Systems Administrators;7300;1.6%  
 Mechanical Engineers;6553;1.4%  
 ```
-<img src="/src/plots/2014_occ_pie.png" width="700" height="500">
+<img src="/src/plots/2014_occ_pie.png" width="650" height="500">
 
 ```
 TOP_STATES;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE  
@@ -52,7 +52,7 @@ GA;16080;3.5%
 WA;15581;3.4%  
 FL;15563;3.4%  
 ```
-<img src="/src/plots/2014_state_pie.png" width="500" height="500">
+<img src="/src/plots/2014_state_pie.png" width="600" height="500">
 
 ###### 2015:  
 ```
