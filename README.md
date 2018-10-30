@@ -99,7 +99,7 @@ ACCOUNTANTS AND AUDITORS;10187;1.8%
 NETWORK AND COMPUTER SYSTEMS ADMINISTRATORS;9876;1.7%  
 MECHANICAL ENGINEERS;8315;1.5%  
 ```
-<img src="/src/plots/2016_occ_pie.png" width="680" height="480">
+<img src="/src/plots/2016_occ_pie.png" width="680" height="460">
 
 ```
 TOP_STATES;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE  
@@ -114,7 +114,7 @@ PA;21141;3.7%
 WA;20387;3.6%  
 FL;18684;3.3%  
 ```
-<img src="/src/plots/2014_state_pie.png" width="520" height="480">
+<img src="/src/plots/2014_state_pie.png" width="520" height="460">
 
 ## **Additional Analysis**
 
