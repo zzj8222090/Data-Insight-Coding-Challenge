@@ -118,7 +118,7 @@ FL;18684;3.3%
 
 ## **Additional Analysis**
 
-<img src="/src/plots/bars.png" width="680" height="480">
+<img src="/src/plots/bars.png" width="620" height="480">
 
 
 ## **Comments**
