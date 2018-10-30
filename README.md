@@ -83,7 +83,7 @@ PA;20146;3.7%
 WA;19225;3.5%  
 FL;18296;3.3%  
 ```
-<img src="/src/plots/2014_state_pie.png" width="520" height="480">
+<img src="/src/plots/2014_state_pie.png" width="520" height="450">
 
 ###### 2016:
 ```
