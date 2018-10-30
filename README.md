@@ -127,8 +127,9 @@ FL;18684;3.3%
 - I did't put test datasets inside input folder because I didn't want to push large files to github.
 - To run, just put the h1b_input.csv(or whatever anything else) file into input folder and run the run.sh.
 - The test on the provided website has been passed.
-- The results have been tested with the output by pandas, which turned out to be the same. The code that was used: 
+- The results have been compared with the output by pandas, which turned out to be the same. The code that was used: 
 ```python
 f.loc[f['STATUS']=='CERTIFIED'].groupby('LCA_CASE_WORKLOC1_STATE',as_index=False).count().sort_values('STATUS',ascending=False)['STATUS'][0:10]
 ```
 - The time complexity is **O(nm)** where n is the number of lines in the input file and m is the number of columns, which means parsing the input file is the largest portion in terms of running time in my algorithm and the average total running time is around 7 seconds(depending on the machine).
+- Some additional basic analysis have been done with some plots, code is in the **src** folder and plots can be found in the **/src/plots** folder.
