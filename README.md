@@ -120,6 +120,7 @@ FL;18684;3.3%
 
 <img src="/src/plots/bars.png" width="600" height="480">
 
+<img src="/src/plots/plot.png" width="600" height="480">
 
 ## **Comments**
 
