@@ -37,7 +37,7 @@ Financial Analysts;7784;1.7%
 Network and Computer Systems Administrators;7300;1.6%  
 Mechanical Engineers;6553;1.4%  
 ```
-<img src="/src/plots/2014_occ_pie.png" width="100" height="100">
+<img src="/src/plots/2014_occ_pie.png" width="500" height="500">
 ```
 TOP_STATES;NUMBER_CERTIFIED_APPLICATIONS;PERCENTAGE  
 CA;85164;18.7%  
