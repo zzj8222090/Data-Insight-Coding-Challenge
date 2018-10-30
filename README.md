@@ -52,7 +52,7 @@ GA;16080;3.5%
 WA;15581;3.4%  
 FL;15563;3.4%  
 ```
-<img src="/src/plots/2014_state_pie.png" width="450" height="540">
+<img src="/src/plots/2014_state_pie.png" width="470" height="460">
 
 ###### 2015:  
 ```
