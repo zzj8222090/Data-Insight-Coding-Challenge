@@ -57,7 +57,7 @@ def pieplot(name, flag):
 # pieplot('H1B_FY_2016.csv',2)
 
 
-def getdata(name):
+def ifcerbars(name):
     x = [2014, 2015, 2016]
     num_cer = []
     num_noncer = []
@@ -74,6 +74,7 @@ def getdata(name):
     fig, ax = plt.subplots()
     ax.bar(ind, num_cer, width=0.2, color='lightskyblue')
     ax.bar(ind + 0.2, num_noncer, width=0.2, color='yellowgreen')
+    ax.set_title('Number of Certified and Non-Certified Visas by Year')
     ax.legend(('CERTIFIED', 'NON-CERTIFIED'))
     ax.set_xticks(ind + 0.1)
     ax.set_ylim((0, 600000))
@@ -82,4 +83,12 @@ def getdata(name):
     plt.show()
 
 
-getdata('H1B_FY_')
+ifcerbars('H1B_FY_')
+
+
+def certifiedtype(name):
+    f = pd.read_csv(name +'.csv', sep=';', index_col=0, header=0)
+    print(f.columns)
+    print(f.groupby('VISA_CLASS').count().sort_values('STATUS', ascending=False)['STATUS'])
+
+# certifiedtype('H1B_FY_2014')
